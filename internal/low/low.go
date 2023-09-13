@@ -598,7 +598,7 @@ func FreeKNI(port uint16) error {
 
 // GetPortsNumber gets total number of available Ethernet devices.
 func GetPortsNumber() int {
-	return int(C.rte_eth_dev_count())
+	return int(C.rte_eth_dev_count_avail())
 }
 
 func CheckPortRSS(port uint16) int32 {
